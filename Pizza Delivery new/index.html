@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@400;700&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="toolbar">
+        <span>tel: (023) 312 826</span>
+        <div class="flags">
+          <a href=""><img src="img/hrv-flag.jpg" alt="" class="hrv" /></a>
+          <a href=""><img src="img/uk-flag.jpg" alt="" class="uk" /></a>
+        </div>
+      </div>
+      <nav class="navbar">
+        <div class="container">
+        <div class="left">
+          <ul>
+            <li><a href="#">NASLOVNA</a> <span>&#8226</span></li>
+            <li><a href="#">MENI</a> <span>&#8226</span></li>
+            <li><a style="color:rgb(207, 7, 7)"href="#">ONLINE NARUDŽBA</a></li>
+          </ul>
+        </div>
+        <img class="logo" src="img/logo.png" alt="" />
+        <div class="right">
+          <ul>
+            <li><a href="#O">O NAMA</a> <span>&#8226</span></li>
+            <li><a href="#">NOVOSTI</a> <span>&#8226</span></li>
+            <li><a href="#">KONTAKT</a></li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!--JELOVNIK-->
+      <section class="jelovnik">
+        <div class="title">
+          <h1>JELOVNIK</h1>
+        </div>
+        <div class="meni-wrapper">
+        <h2>&#8226 PIZZA &#8226</h2>
+        <div class="pizza-meni">
+          <div class="meni-left">
+            <!---->
+            <div class="pizza">
+              <div>
+                <h3>Italiana</h3>
+                <hr />
+                <p>rajčica, mozzarella, rukola</p>
+              </div>
+              <img src="img/italiana.jpg" alt="" />
+            </div>
+
+            <!---->
+            <div class="pizza">
+              <div>
+                <h3>Mexican Salsa</h6>
+                <hr />
+                <p>
+                  umak od salse, sir, kulen, špek, kukuruz, grah, kapula, ljuti
+                  feferoni
+                </p>
+              </div>
+              <img src="img/mexican-salsa.jpg" alt="" />
+            </div>
+
+            <!---->
+            <div class="pizza">
+              <div>
+                <h3>Italiana (Raffaele Esposito)</h3>
+                <hr />
+                <p>rajčica, mozzarella, bosiljak</p>
+              </div>
+              <img src="img/rafaele.jpg" alt="" />
+            </div>
+
+            <!---->
+            <div class="pizza">
+              <div>
+                <h3>Funghi</h3>
+                <hr />
+                <p>rajčica, sir, gljive, maslina</p>
+              </div>
+              <img src="img/funghi.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="meni-right">
+
+            <!---->
+            <div class="pizza">
+              <div>
+                <h3>Quattro Formaggio</h3>
+                <hr />
+                <p>rajčica, sir, gljive, sezonsko povrće, maslina</p>
+              </div>
+              <img src="img/quatro-formagi.jpg" alt="" />
+            </div>
+
+            <!---->
+            <div class="pizza">
+              <div>
+                <h3>Vegetarijana</h3>
+                <hr />
+                <p>rajčica, sir, gljive, sezonsko povrće, maslina</p>
+              </div>
+              <img src="img/vegetariana.jpg" alt="" />
+            </div>
+
+            <!---->
+            <div class="pizza">
+              <div>
+                <h3>Calzona Pizzara Style</h3>
+                <hr />
+                <p>
+                  umak od rajčice, šunka, panceta, salama, vrhnje, paprika,
+                  mozzarella
+                </p>
+              </div>
+              <img src="img/calzona.png" alt="" />
+            </div>
+
+            <!---->
+            <div class="pizza">
+              <div>
+                <h3>Calzona Quattro Formaggio,4 vrste sira</h3>
+                <hr />
+                <p>
+                  umak od rajčice, gorgonzola, mozzarella, grana padano,
+                  mozzarella di bufala
+                </p>
+              </div>
+              <img src="img/calzona-formagi.jpg" alt="" />
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </section>
+
+      <!--KONTAKT-->
+      
+      <section class="kontakt">
+        <!---->
+        <div class="title-kontakt"> <h1>KONTAKT</h1>
+          </div>
+        <div class="kontakt-container">
+          <form  
+          name="upit"
+          class="kontakt-forma"
+          action="hvala-vam.html" 
+          method="GET"
+          onsubmit= "return validateForm()">
+            <h2>Kontaktirajte nas</h2>
+            <select name="pizza" id="pizza-select">
+             <option hidden value="hide">Odaberite koju pizzu želite naručiti</option>
+
+             <option 
+              value="italiana">Italiana</option>
+
+              <option 
+              value="mexican_salsa">Mexican Salsa</option>
+
+              <option 
+              value="Italiana(Raffaele_Espostio)">Italiana (Raffaele Espostio)</option> 
+
+              <option 
+              value="Quattro_Formaggio">Quattro Formaggio</option>
+
+              <option value="Vegetarijana">Vegetarijana</option>
+
+              <option value="Calzona_Pizzara_Style">Calzona Pizzara Style</option>
+
+              <option value="4_vrste_sira">Calzona Quattro Formaggio/4 vrste sira</option>
+            </select>
+            <span id="check-pizza"></span>
+
+            
+            <input type="text" name="name" id="name" placeholder="Ime i prezime*"/>
+            <span id="test0"></span>
+            <input type="email" id="email" name="email"placeholder="E-mail*"/>
+            <span id="test1"></span>
+            <input name="telefon" type="number" id="telefon" placeholder="Telefon*" />
+            <span id="test2"></span>
+            
+            <textarea  name="poruka"  id=""  cols="50"  rows="8" placeholder="Poruka"></textarea>
+
+            <p class="terms">
+               Slanjem upita putem ovog obrasca potvrđujete kako ste upoznati s
+               <a href="#">Pravila o privatnosti</a> Pizzara i slažete se s njima.
+               Ovima također dajete suglasnost (privolu) za neophodni da bismo
+               mogli udovoljiti Vašem zahtjevu.
+            </p>
+            <div>
+            <input id="checkbox"type="checkbox" name="checkbox"/>
+            <label id = "ch-label" for="checkbox"><b style="color:black">Slažem se</b></label>
+          </div>
+            <span id="uvjeti"></span>
+            <button class="posalji-upit">Pošalji upit</button>
+          </form>
+
+        <!---->
+        <div class="info">
+          <h2>Info</h2>
+          <p>
+            <a href="" class="mail">info@domino.hr</a>
+            <br/>
+            (023) 312 826 
+            <br>
+            Vaša adresa 1 
+            <br>
+            23000 Šibenik
+            <br>
+            Hrvatska
+          </p>
+          <div class="icons">
+          <a href="#" >
+            <div class="fb-icon"></div>
+          </a>
+          <a href="#">
+            <div class="tw-icon"></div>
+          </a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!--LOCATION-->
+      <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.2497682365624!2d15.90730089658801!3d43.7261379657883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1335258e61ae04cf%3A0x6c2bf83c0c11027d!2sViva!5e0!3m2!1sen!2shr!4v1644431946028!5m2!1sen!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+      <span><a href="">Pravila o privatnosti</a></span>
+      <span><a href="">Izjava o kolačičima</a></span> <br>
+      <span>© 2016-2022 Picerija, Development by <a href="">Moja firma</a></span>
+      <div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
