@@ -16,7 +16,7 @@
       }
     ],
     "lang": "en-US",
-    "start_url": "PWA/index.html",
+    "start_url": "/PWA/index.html",
     "display": "standalone",
     "background_color": "white",
     "theme_color": "white"
