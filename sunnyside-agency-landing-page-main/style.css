@@ -165,7 +165,7 @@ a {
   height: 70px;
 }
 
-.navbar ul {
+.navbar .nav-list {
   display: flex;
   align-items: center;
   margin-top: auto;
@@ -180,11 +180,11 @@ a {
   font-size: 16px;
   color: white;
 }
-.navbar ul li {
+.navbar .nav-list li {
   padding: 0px 30px;
   list-style-type: none;
 }
-li:first-child {
+.nav-list li:first-child {
   margin-right: auto;
 }
 .navbar .contact-btn {
@@ -379,7 +379,7 @@ footer img {
 }
 
 @media screen and (max-width: 760px) {
-  .navbar ul li {
+  .navbar .nav-list li {
     padding: 10px;
   }
   .content {
@@ -518,4 +518,85 @@ footer img {
     background-position: center;
     background-repeat: no-repeat;
   }
+}
+
+.mobile-nav::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid transparent;
+  border-right: 1.5rem solid #fff;
+  top: -1.5rem;
+  right: 0;
+}
+
+.mobile-nav li {
+  position: relative;
+}
+
+.mobile-nav a:after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: 0px;
+  height: 0.2rem;
+  background: #23303e;
+}
+
+.mobile-nav a:hover:after {
+  transition: width 0.35s ease-in;
+  width: calc(100% - 40px);
+}
+
+.mobile-nav {
+  background-color: white;
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 10vw;
+  top: 100px;
+  z-index: 2;
+  visibility: collapse;
+}
+
+.mobile-nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.mobile-nav ul li {
+  padding: 20px;
+}
+
+.mobile-nav ul li a {
+  color: hsl(210, 4%, 67%);
+}
+
+.mobile-nav ul li a:hover {
+  color: #23303e;
+}
+
+.mobile-contact-btn {
+  border: none;
+  background-color: hsl(51, 100%, 49%);
+  color: #333;
+  font-family: "Poppins";
+  font-weight: bold;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 1.8rem;
+}
+.mobile-contact-btn:hover {
+  background-color: skyblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
 }
