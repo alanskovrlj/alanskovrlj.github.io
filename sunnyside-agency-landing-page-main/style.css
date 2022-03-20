@@ -436,7 +436,7 @@ footer img {
     left: calc(50vw - 15px);
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .hero {
     background: url(images/mobile/image-header.jpg);
     background-position-y: 70%;
