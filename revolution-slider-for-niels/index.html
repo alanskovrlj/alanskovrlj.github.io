@@ -67,7 +67,7 @@
       left: 127px;
       top: 90px;
       animation-name: animatePink;
-      text-replace: cubic-bezier(0.5, 0, 0.75, 0);
+      transition: cubic-bezier(0.5, 0, 0.75, 0);
       animation-duration: 2s;
       animation-delay: 2s;
     }
@@ -334,7 +334,6 @@
       background-color: rgb(255, 19, 61);
       font-family: Montserrat;
       color: rgb(255, 255, 255);
-      text-decoration: none;
       width: 255px;
       height: 48px;
       text-align: left;
@@ -345,11 +344,15 @@
       padding-left: 32px;
       border-radius: 3px;
       padding-right: 32px;
-      backdrop-filter: none;
       opacity: 1;
       visibility: visible;
       border-width: 0px;
       margin: 10px 0px;
+    }
+    input[type="submit"]:hover {
+      cursor: pointer;
+      color: black;
+      background-color: #00422e;
     }
   </style>
   <body>
@@ -371,7 +374,6 @@
             Bereik effectief meer studenten voor je stages via WhatsApp.
           </h1>
           <p class="header-description">Students love us - so should you.</p>
-
           <form action="https://google.com">
             <input
               type="submit"
