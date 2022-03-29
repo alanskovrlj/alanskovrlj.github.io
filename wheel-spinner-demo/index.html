@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wheel {
+        height: 370px;
+        width: 370px;
+        background-position: center;
+        background-position-y: 33%;
+        background-image: url("wheel.jpg");
+        border-radius: 90%;
+        transform: rotate(0deg);
+        transition: 3s;
+      }
+      .container {
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container * {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>|</div>
+
+      <div>|</div>
+
+      <div>|</div>
+    </div>
+    <div id="wheel"></div>
+
+    <script>
+      var activated = false;
+      var wheel = document.querySelector("#wheel");
+      wheel.addEventListener("click", function (e) {
+        if (activated) return;
+        else {
+          deg = Math.floor(5000 + Math.random() * 1000);
+          wheel.style.transition = "3s cubic-bezier(0.22, 1, 0.36, 1)";
+          wheel.style.transform = `rotate(${deg}deg)`;
+          activated = true;
+        }
+      });
+
+      var prizeArray = [
+        200, 900, 500, 400, 100, 200, 1000, 800, 400, 600, 10000, 300, 400, 700,
+        1000, 400,
+      ];
+
+      wheel.addEventListener("transitionend", () => {
+        var index = Math.floor((deg % 360) / 23);
+        index = 15 - index;
+        alert("you have won " + prizeArray[index] + "!!!");
+        activated = false;
+        wheel.style.transition = "0s";
+        wheel.style.transform = `rotate(${deg % 360}deg)`;
+      });
+    </script>
+  </body>
+</html>
