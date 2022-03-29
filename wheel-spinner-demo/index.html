@@ -11,7 +11,7 @@
         width: 370px;
         background-position: center;
         background-position-y: 33%;
-        background-image: url("wheel.jpg");
+        background-image: url("./wheel.jpg");
         border-radius: 90%;
         transform: rotate(0deg);
         transition: 3s;
@@ -56,7 +56,7 @@
       ];
 
       wheel.addEventListener("transitionend", () => {
-        var index = Math.floor((deg % 360) / 23);
+        var index = Math.floor(((deg % 360) - 11.25) / 22.5);
         index = 15 - index;
         alert("you have won " + prizeArray[index] + "!!!");
         activated = false;
