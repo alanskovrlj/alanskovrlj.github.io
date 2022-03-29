@@ -41,7 +41,7 @@
       top: 0px;
       animation-name: animateRed;
       animation-duration: 1.5s;
-      animation-delay: 1.5s;
+      animation-delay: 1s;
       transition: cubic-bezier(0.65, 0, 0.35, 1);
     }
     .yellow {
@@ -137,9 +137,6 @@
         max-width: 500px !important;
         /*  margin-top: 100px !important; */
       }
-      .header {
-        /* max-height: 600px; */
-      }
       .container {
         /*  max-height: 600px; */
         margin-left: 10px !important;
@@ -181,7 +178,6 @@
       .title {
         font-size: 40px;
         max-width: 700px;
-
       }
       .header-title-wrap {
         margin-right: 0px !important;
@@ -251,38 +247,38 @@
       }
       @keyframes animatePink {
         from {
-          top: 60px;
-          left: -20px;
+          top: 60px !important;
+          left: -20px !important;
           opacity: 0;
         }
         to {
-          top: 200px;
-          left: 40px;
+          top: 200px !important;
+          left: 40px !important;
           opacity: 1;
         }
       }
       .red {
+        position: relative;
         width: 120px !important;
         height: 120px !important;
-        top: 20px !important;
-        left: 20px !important;
+        top: 20px;
+        left: 20px;
       }
       .yellow {
+        position: relative;
         width: 80px !important;
         height: 80px !important;
-        right: 40px !important;
-        top: 140px !important;
+        right: 40px;
+        top: 140px;
         animation-delay: 2.5s;
       }
       .pink {
+        position: relative;
         width: 50px !important;
         height: 50px !important;
-        top: 200px !important;
-        left: 40px !important;
+        top: 200px;
+        left: 40px;
         animation-delay: 3s;
-      }
-      .header {
-        /* max-height: 500px !important */
       }
       .header-title-wrap {
         /*  max-width: 400px !important; */
@@ -332,6 +328,22 @@
         width: 80vw !important;
         height: 200px !important;
       }
+      .circles {
+        top: -340px !important;
+        left: 170px !important;
+      }
+      body header .red {
+        width: 60px !important;
+        height: 60px !important;
+      }
+      body header .circles .yellow {
+        top: 120px;
+        right: -50px !important;
+      }
+      body header .pink {
+        left: 80px !important;
+        top: 180px;
+      }
     }
     @media (max-width: 410px) {
       body header .title {
@@ -378,23 +390,35 @@
     }
 
     @media (max-width: 600px) {
+      @keyframes animateYellow {
+        from {
+          top: 80px;
+          right: 20px;
+          opacity: 0;
+        }
+        to {
+          top: 120px;
+          right: 10px;
+          opacity: 1;
+        }
+      }
       header .red {
         width: 100px !important;
         height: 100px !important;
-        top: 20px !important;
-        left: 20px !important;
+        top: 20px;
+        left: 20px;
       }
       header .yellow {
         width: 60px !important;
         height: 60px !important;
-        right: 40px !important;
-        top: 140px !important;
+        right: 10px;
+        top: 120px;
         animation-delay: 2.5s;
       }
       .pink {
         width: 20px !important;
         height: 20px !important;
-        top: 200px !important;
+        top: 200px;
         left: 40px !important;
         animation-delay: 3s;
       }
@@ -481,6 +505,7 @@
       margin-top: 77px;
       z-index: -5;
       overflow: hidden;
+      -webkit-overflow-scrolling: touch;
     }
     .header-btn {
       z-index: 10;
@@ -565,7 +590,7 @@
           redPos = a;
           yellowPos = b;
           pinkPos = c;
-          console.log(pinkPos);
+          console.log(yellowPos);
         } else {
         }
       }
@@ -575,8 +600,8 @@
       var x2 = window.matchMedia("(max-width: 1100px)");
 
       myFunction(x1); // Call listener function at run time
-      x1.addListener(myFunction(x1, 20, 140, 200)); // Attach listener function on state changes
-      x2.addListener(myFunction(x2, 0, 32, 90));
+      x1.addListener(myFunction(x1, 20, 120, 200)); // Attach listener function on state changes
+      /* x2.addListener(myFunction(x2, 0, 32, 90)); */
 
       function doSomething(scrollPos) {
         // Do something with the scroll position
