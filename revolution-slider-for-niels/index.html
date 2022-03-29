@@ -5,198 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-    * {
-      box-sizing: border-box;
-      margin: 0;
-    }
-    body {
-      height: 800vh;
-    }
-    section {
-      height: 200px;
-      z-index: 2;
-      background-color: white;
-      position: relative;
-    }
-    #nav {
-      height: 77px;
-      background-color: whitesmoke;
-      position: fixed;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      z-index: 5;
-    }
-
-    .red {
-      border-radius: 90%;
-      background-color: #ff133d;
-      width: 250px;
-      height: 250px;
-      position: relative;
-      opacity: 0;
-      top: 0px;
-      animation-name: animateRed;
-      animation-duration: 1.5s;
-      animation-delay: 1s;
-      transition: cubic-bezier(0.65, 0, 0.35, 1);
-    }
-    .yellow {
-      border-radius: 90%;
-      background-color: #ff9f0c;
-      width: 210px;
-      height: 210px;
-      position: relative;
-      opacity: 0;
-      animation: animateYellow;
-      transition: cubic-bezier(0.5, 0, 0.75, 0);
-      animation-duration: 2s;
-      animation-delay: 2s;
-      right: 120px;
-      top: 32px;
-    }
-    .pink {
-      border-radius: 90%;
-      background-color: #ffc4e4;
-      width: 137px;
-      height: 137px;
-      position: relative;
-      opacity: 0;
-      left: 127px;
-      top: 90px;
-      animation-name: animatePink;
-      transition: cubic-bezier(0.5, 0, 0.75, 0);
-      animation-duration: 2s;
-      animation-delay: 2.5s;
-    }
-
-    .circles {
-      width: 40%;
-      height: calc(137px + 210px 250px);
-      margin: auto;
-      padding-left: 40px;
-      overflow: visible;
-    }
-    h1 {
-      width: 1200px;
-    }
-
-    @keyframes animateRed {
-      from {
-        top: -10px;
-        left: 10px;
-        opacity: 0;
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
       }
-      to {
+      body {
+        height: 800vh;
+      }
+      section {
+        height: 200px;
+        z-index: 2;
+        background-color: white;
+        position: relative;
+      }
+      #nav {
+        height: 77px;
+        background-color: whitesmoke;
+        position: fixed;
         top: 0px;
         left: 0px;
-        opacity: 1;
+        width: 100%;
+        z-index: 5;
       }
-    }
-    @keyframes animateYellow {
-      from {
-        top: -220px;
-        right: 0px;
+
+      .red {
+        border-radius: 90%;
+        background-color: #ff133d;
+        width: 250px;
+        height: 250px;
+        position: relative;
         opacity: 0;
+        top: 0px;
+        animation-name: animateRed;
+        animation-duration: 1.5s;
+        animation-delay: 1s;
+        transition: cubic-bezier(0.65, 0, 0.35, 1);
       }
-      to {
-        top: 32px;
+      .yellow {
+        border-radius: 90%;
+        background-color: #ff9f0c;
+        width: 210px;
+        height: 210px;
+        position: relative;
+        opacity: 0;
+        animation: animateYellow;
+        transition: cubic-bezier(0.5, 0, 0.75, 0);
+        animation-duration: 2s;
+        animation-delay: 2s;
         right: 120px;
-        opacity: 1;
+        top: 32px;
       }
-    }
-
-    @keyframes animatePink {
-      from {
-        top: -100px;
-        left: 0px;
+      .pink {
+        border-radius: 90%;
+        background-color: #ffc4e4;
+        width: 137px;
+        height: 137px;
+        position: relative;
         opacity: 0;
-      }
-      to {
-        top: 90px;
         left: 127px;
-        opacity: 1;
+        top: 90px;
+        animation-name: animatePink;
+        transition: cubic-bezier(0.5, 0, 0.75, 0);
+        animation-duration: 2s;
+        animation-delay: 2.5s;
       }
-    }
 
-    @keyframes animateTitle {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: 1100px) {
-      .header-title-wrap {
-        margin-left: 10px;
-        max-width: 500px !important;
-        /*  margin-top: 100px !important; */
-      }
-      .container {
-        /*  max-height: 600px; */
-        margin-left: 10px !important;
-      }
-      /*  .title {
-        font-size: 40px !important;
-        line-height: 50px !important;
-      } */
-      .red {
-        width: 180px !important;
-        height: 180px !important;
-      }
-      .yellow {
-        width: 140px !important;
-        height: 140px !important;
-      }
-      .pink {
-        width: 110px !important;
-        height: 110px !important;
-      }
-    }
-
-    @media (max-width: 1280px) {
-      .red {
-        width: 220px;
-        height: 220px;
-      }
-      .title {
-        width: 600px;
-      }
-      .yellow {
-        width: 180px;
-        height: 180px;
-      }
-      .pink {
-        width: 130px;
-        height: 130px;
-      }
-      .title {
-        font-size: 40px;
-        max-width: 700px;
-      }
-      .header-title-wrap {
-        margin-right: 0px !important;
-      }
-      .header-description {
-        font-size: 26px !important;
-      }
-      .header-title-wrap {
-        max-width: 700px !important;
-      }
       .circles {
-        padding-left: 20px;
+        width: 40%;
+        height: calc(137px + 210px 250px);
+        margin: auto;
+        padding-left: 40px;
+        overflow: visible;
       }
-      .container {
-        margin: 0px 40px;
+      h1 {
+        width: 1200px;
       }
-      .pink {
-        left: 50px;
+
+      @keyframes animateRed {
+        from {
+          top: -10px;
+          left: 10px;
+          opacity: 0;
+        }
+        to {
+          top: 0px;
+          left: 0px;
+          opacity: 1;
+        }
       }
+      @keyframes animateYellow {
+        from {
+          top: -220px;
+          right: 0px;
+          opacity: 0;
+        }
+        to {
+          top: 32px;
+          right: 120px;
+          opacity: 1;
+        }
+      }
+
       @keyframes animatePink {
         from {
           top: -100px;
@@ -205,343 +116,432 @@
         }
         to {
           top: 90px;
-          left: 50px;
+          left: 127px;
           opacity: 1;
         }
       }
-    }
 
-    @media (max-width: 600px) {
-      .title {
-        font-size: 40px !important;
-        width: 400px;
-        height: 250px !important;
-        margin-top: -40px;
-      }
-    }
-
-    @media (max-width: 880px) {
-      @keyframes animateRed {
+      @keyframes animateTitle {
         from {
-          top: -10px;
-          left: 10px;
           opacity: 0;
         }
         to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 1100px) {
+        .header-title-wrap {
+          margin-left: 10px;
+          max-width: 500px !important;
+          /*  margin-top: 100px !important; */
+        }
+        .container {
+          /*  max-height: 600px; */
+          margin-left: 10px !important;
+        }
+        /*  .title {
+        font-size: 40px !important;
+        line-height: 50px !important;
+      } */
+        .red {
+          width: 180px !important;
+          height: 180px !important;
+        }
+        .yellow {
+          width: 140px !important;
+          height: 140px !important;
+        }
+        .pink {
+          width: 110px !important;
+          height: 110px !important;
+        }
+      }
+
+      @media (max-width: 1280px) {
+        .red {
+          width: 220px;
+          height: 220px;
+        }
+        .title {
+          width: 600px;
+        }
+        .yellow {
+          width: 180px;
+          height: 180px;
+        }
+        .pink {
+          width: 130px;
+          height: 130px;
+        }
+        .title {
+          font-size: 40px;
+          max-width: 700px;
+        }
+        .header-title-wrap {
+          margin-right: 0px !important;
+        }
+        .header-description {
+          font-size: 26px !important;
+        }
+        .header-title-wrap {
+          max-width: 700px !important;
+        }
+        .circles {
+          padding-left: 20px;
+        }
+        .container {
+          margin: 0px 40px;
+        }
+        .pink {
+          left: 50px;
+        }
+        @keyframes animatePink {
+          from {
+            top: -100px;
+            left: 0px;
+            opacity: 0;
+          }
+          to {
+            top: 90px;
+            left: 50px;
+            opacity: 1;
+          }
+        }
+      }
+
+      @media (max-width: 600px) {
+        .title {
+          font-size: 40px !important;
+          width: 400px;
+          height: 250px !important;
+          margin-top: -40px;
+        }
+      }
+
+      @media (max-width: 880px) {
+        @keyframes animateRed {
+          from {
+            top: -10px;
+            left: 10px;
+            opacity: 0;
+          }
+          to {
+            top: 20px;
+            left: 20px;
+            opacity: 1;
+          }
+        }
+        @keyframes animateYellow {
+          from {
+            top: 80px;
+            right: 20px;
+            opacity: 0;
+          }
+          to {
+            top: 140px;
+            right: 40px;
+            opacity: 1;
+          }
+        }
+        @keyframes animatePink {
+          from {
+            top: 60px !important;
+            left: -20px !important;
+            opacity: 0;
+          }
+          to {
+            top: 200px !important;
+            left: 40px !important;
+            opacity: 1;
+          }
+        }
+        .red {
+          position: relative;
+          width: 120px !important;
+          height: 120px !important;
           top: 20px;
           left: 20px;
-          opacity: 1;
         }
-      }
-      @keyframes animateYellow {
-        from {
-          top: 80px;
-          right: 20px;
-          opacity: 0;
-        }
-        to {
-          top: 140px;
+        .yellow {
+          position: relative;
+          width: 80px !important;
+          height: 80px !important;
           right: 40px;
-          opacity: 1;
+          top: 140px;
+          animation-delay: 2.5s;
+        }
+        .pink {
+          position: relative;
+          width: 50px !important;
+          height: 50px !important;
+          top: 200px;
+          left: 40px;
+          animation-delay: 3s;
+        }
+        .header-title-wrap {
+          /*  max-width: 400px !important; */
+          /*  max-height: 600px; */
+          font-size: 30px !important;
+          margin-top: 0px !important;
+          margin: 0px !important;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .header-description {
+          max-width: 400px !important;
+          text-align: center !important;
+        }
+        .title {
+          text-align: center !important; /*
+        font-size: 30px !important; */
+          /* width: 400px; */
+        }
+        .container {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0px !important;
+          height: 100%;
+        }
+        .circles-wrap {
+          position: absolute;
+        }
+        .header {
+          position: relative;
+        }
+        .circles {
+          position: absolute;
+          top: -200px;
+          left: 400px;
+          z-index: -5;
         }
       }
-      @keyframes animatePink {
-        from {
-          top: 60px !important;
-          left: -20px !important;
-          opacity: 0;
+      @media (max-width: 450px) {
+        body header .title {
+          font-size: 30px !important;
+          line-height: 50px;
+          width: 80vw !important;
+          height: 200px !important;
         }
-        to {
-          top: 200px !important;
+        .circles {
+          top: -340px !important;
+          left: 170px !important;
+        }
+        body header .red {
+          width: 60px !important;
+          height: 60px !important;
+        }
+        body header .circles .yellow {
+          top: 120px;
+          right: -50px !important;
+        }
+        body header .pink {
+          left: 80px !important;
+          top: 180px;
+        }
+        body header .header-description {
+          font-size: 22px !important;
+          width: 80vw;
+        }
+      }
+      @media (max-width: 410px) {
+        body header .title {
+          font-size: 30px !important;
+          line-height: 50px;
+          width: 80vw !important;
+          height: 200px !important;
+        }
+        body .header-description {
+          font-size: 22px !important;
+          width: 80vw;
+        }
+      }
+
+      @media (max-width: 350px) {
+        body header .title {
+          font-size: 28px !important;
+          width: 80vw !important;
+          height: 200px !important;
+        }
+        body .header-description {
+          font-size: 22px !important;
+          width: 80vw;
+        }
+      }
+
+      @media (max-width: 300px) {
+        body header .title {
+          font-size: 22px !important;
+          width: 80vw !important;
+          line-height: 45px;
+          height: 200px !important;
+        }
+        body .header-description {
+          font-size: 20px !important;
+          width: 80vw;
+        }
+        .header-btn {
+          width: 200px !important;
+          font-size: 14px !important;
+          text-align: center !important;
+          padding: 0px 5px !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        @keyframes animateYellow {
+          from {
+            top: 80px;
+            right: 20px;
+            opacity: 0;
+          }
+          to {
+            top: 120px;
+            right: 10px;
+            opacity: 1;
+          }
+        }
+        header .red {
+          width: 100px !important;
+          height: 100px !important;
+          top: 20px;
+          left: 20px;
+        }
+        header .yellow {
+          width: 60px !important;
+          height: 60px !important;
+          right: 10px;
+          top: 120px;
+          animation-delay: 2.5s;
+        }
+        .pink {
+          width: 20px !important;
+          height: 20px !important;
+          top: 200px;
           left: 40px !important;
-          opacity: 1;
+          animation-delay: 3s;
+        }
+        .circles {
+          position: absolute;
+          top: -100px;
+          left: 250px;
+          z-index: -5;
         }
       }
-      .red {
-        position: relative;
-        width: 120px !important;
-        height: 120px !important;
-        top: 20px;
-        left: 20px;
+
+      .circles-wrap {
+        margin-top: 10px;
+        width: 40%;
+        display: flex;
+        justify-content: center;
       }
-      .yellow {
-        position: relative;
-        width: 80px !important;
-        height: 80px !important;
-        right: 40px;
-        top: 140px;
-        animation-delay: 2.5s;
+
+      .container {
+        margin-top: 86px;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
       }
-      .pink {
-        position: relative;
-        width: 50px !important;
-        height: 50px !important;
-        top: 200px;
-        left: 40px;
-        animation-delay: 3s;
+
+      .title {
+        font-family: Montserrat;
+        color: rgb(255, 255, 255);
+        max-width: 903px;
+        height: 186px;
+        text-align: left;
+        line-height: 62px;
+        letter-spacing: 0px;
+        font-weight: 600;
+        font-size: 49px;
+        opacity: 1;
+        padding: 40px 0px;
+        margin-bottom: 15px;
+        animation-name: animateTitle;
+        animation-duration: 2s;
+        transition: cubic-bezier(0.12, 0, 0.39, 0);
+      }
+
+      .header-description {
+        z-index: 9;
+        font-family: Montserrat;
+        height: auto;
+        color: rgb(255, 255, 255);
+        width: 546px;
+        text-align: left;
+        line-height: 40px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        font-size: 31px;
+        opacity: 1;
+        padding: 40px 0px;
+        margin: 10px 0px;
+        margin-top: 40px;
+        opacity: 0;
+        animation-name: animateTitle;
+        animation-duration: 2s;
+        animation-delay: 1.5s;
+        transition: cubic-bezier(0.11, 0, 0.5, 0);
       }
       .header-title-wrap {
-        /*  max-width: 400px !important; */
-        /*  max-height: 600px; */
-        font-size: 30px !important;
-        margin-top: 0px !important;
-        margin: 0px !important;
-        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-      }
-      .header-description {
-        max-width: 400px !important;
-        text-align: center !important;
-      }
-      .title {
-        text-align: center !important; /*
-        font-size: 30px !important; */
-        /* width: 400px; */
-      }
-      .container {
-        display: flex;
         justify-content: center;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0px !important;
-        height: 100%;
-      }
-      .circles-wrap {
-        position: absolute;
+        margin: 0px 40px;
+        margin-top: 150px;
+        width: 750px;
+        z-index: 1;
       }
       .header {
+        background-color: #00422e;
+        box-shadow: inset -4rem 5px 20px 40rem rgba(0, 0, 0, 10%);
+        width: 100%;
+        height: 700px;
+        height: 80vh;
         position: relative;
-      }
-      .circles {
-        position: absolute;
-        top: -200px;
-        left: 400px;
+        padding: -1px;
+        padding: 1px;
+        margin-top: 77px;
         z-index: -5;
-      }
-    }
-    @media (max-width: 450px) {
-      body header .title {
-        font-size: 30px !important;
-        line-height: 50px;
-        width: 80vw !important;
-        height: 200px !important;
-      }
-      .circles {
-        top: -340px !important;
-        left: 170px !important;
-      }
-      body header .red {
-        width: 60px !important;
-        height: 60px !important;
-      }
-      body header .circles .yellow {
-        top: 120px;
-        right: -50px !important;
-      }
-      body header .pink {
-        left: 80px !important;
-        top: 180px;
-      }
-      body header .header-description {
-        font-size: 22px !important;
-        width: 80vw;
-      }
-    }
-    @media (max-width: 410px) {
-      body header .title {
-        font-size: 30px !important;
-        line-height: 50px;
-        width: 80vw !important;
-        height: 200px !important;
-      }
-      body .header-description {
-        font-size: 22px !important;
-        width: 80vw;
-      }
-    }
-
-    @media (max-width: 350px) {
-      body header .title {
-        font-size: 28px !important;
-        width: 80vw !important;
-        height: 200px !important;
-      }
-      body .header-description {
-        font-size: 22px !important;
-        width: 80vw;
-      }
-    }
-
-    @media (max-width: 300px) {
-      body header .title {
-        font-size: 22px !important;
-        width: 80vw !important;
-        line-height: 45px;
-        height: 200px !important;
-      }
-      body .header-description {
-        font-size: 20px !important;
-        width: 80vw;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
       }
       .header-btn {
-        width: 200px !important;
-        font-size: 14px !important;
-        text-align: center !important;
-        padding: 0px 5px !important;
-      }
-    }
-
-    @media (max-width: 600px) {
-      @keyframes animateYellow {
-        from {
-          top: 80px;
-          right: 20px;
-          opacity: 0;
-        }
-        to {
-          top: 120px;
-          right: 10px;
-          opacity: 1;
-        }
-      }
-      header .red {
-        width: 100px !important;
-        height: 100px !important;
-        top: 20px;
-        left: 20px;
-      }
-      header .yellow {
-        width: 60px !important;
-        height: 60px !important;
-        right: 10px;
-        top: 120px;
-        animation-delay: 2.5s;
-      }
-      .pink {
-        width: 20px !important;
-        height: 20px !important;
-        top: 200px;
-        left: 40px !important;
+        z-index: 10;
+        background-color: rgb(255, 19, 61);
+        font-family: Montserrat;
+        color: rgb(255, 255, 255);
+        width: 255px;
+        height: 48px;
+        text-align: left;
+        line-height: 48px;
+        letter-spacing: 0px;
+        font-weight: 700;
+        font-size: 16px;
+        padding-left: 32px;
+        border-radius: 3px;
+        padding-right: 32px;
+        opacity: 0;
+        visibility: visible;
+        border-width: 0px;
+        margin: 10px 0px;
+        animation-name: animateTitle;
+        animation-duration: 2s;
         animation-delay: 3s;
+        transition: cubic-bezier(0.11, 0, 0.5, 0);
       }
-      .circles {
-        position: absolute;
-        top: -100px;
-        left: 250px;
-        z-index: -5;
+      input[type="submit"]:hover {
+        cursor: pointer;
+        color: black;
+        background-color: #00422e;
       }
-    }
-
-    .circles-wrap {
-      margin-top: 10px;
-      width: 40%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .container {
-      margin-top: 86px;
-      max-width: 1300px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .title {
-      font-family: Montserrat;
-      color: rgb(255, 255, 255);
-      max-width: 903px;
-      height: 186px;
-      text-align: left;
-      line-height: 62px;
-      letter-spacing: 0px;
-      font-weight: 600;
-      font-size: 49px;
-      opacity: 1;
-      padding: 40px 0px;
-      margin-bottom: 15px;
-      animation-name: animateTitle;
-      animation-duration: 2s;
-      transition: cubic-bezier(0.12, 0, 0.39, 0);
-    }
-
-    .header-description {
-      z-index: 9;
-      font-family: Montserrat;
-      height: auto;
-      color: rgb(255, 255, 255);
-      width: 546px;
-      text-align: left;
-      line-height: 40px;
-      letter-spacing: 0px;
-      font-weight: 400;
-      font-size: 31px;
-      opacity: 1;
-      padding: 40px 0px;
-      margin: 10px 0px;
-      margin-top: 40px;
-      opacity: 0;
-      animation-name: animateTitle;
-      animation-duration: 2s;
-      animation-delay: 1.5s;
-      transition: cubic-bezier(0.11, 0, 0.5, 0);
-    }
-    .header-title-wrap {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 0px 40px;
-      margin-top: 150px;
-      width: 750px;
-      z-index: 1;
-    }
-    .header {
-      background-color: #00422e;
-      box-shadow: inset -4rem 5px 20px 40rem rgba(0, 0, 0, 10%);
-      width: 100%;
-      height: 700px;
-      height: 80vh;
-      position: relative;
-      padding: -1px;
-      padding: 1px;
-      margin-top: 77px;
-      z-index: -5;
-      overflow: hidden;
-      -webkit-overflow-scrolling: touch;
-    }
-    .header-btn {
-      z-index: 10;
-      background-color: rgb(255, 19, 61);
-      font-family: Montserrat;
-      color: rgb(255, 255, 255);
-      width: 255px;
-      height: 48px;
-      text-align: left;
-      line-height: 48px;
-      letter-spacing: 0px;
-      font-weight: 700;
-      font-size: 16px;
-      padding-left: 32px;
-      border-radius: 3px;
-      padding-right: 32px;
-      opacity: 0;
-      visibility: visible;
-      border-width: 0px;
-      margin: 10px 0px;
-      animation-name: animateTitle;
-      animation-duration: 2s;
-      animation-delay: 3s;
-      transition: cubic-bezier(0.11, 0, 0.5, 0);
-    }
-    input[type="submit"]:hover {
-      cursor: pointer;
-      color: black;
-      background-color: #00422e;
-    }
-  </style>
+    </style>
+  </head>
   <body>
     <nav
       id="nav"
