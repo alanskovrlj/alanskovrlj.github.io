@@ -37,11 +37,12 @@
       width: 250px;
       height: 250px;
       position: relative;
+      opacity: 0;
       top: 0px;
       animation-name: animateRed;
-      animation-duration: 2s;
-      animation-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
-      opacity: 1;
+      animation-duration: 1.5s;
+      animation-delay: 1.5s;
+      transition: cubic-bezier(0.65, 0, 0.35, 1);
     }
     .yellow {
       border-radius: 90%;
@@ -53,7 +54,7 @@
       animation: animateYellow;
       transition: cubic-bezier(0.5, 0, 0.75, 0);
       animation-duration: 2s;
-      animation-delay: 1s;
+      animation-delay: 2s;
       right: 120px;
       top: 32px;
     }
@@ -69,7 +70,7 @@
       animation-name: animatePink;
       transition: cubic-bezier(0.5, 0, 0.75, 0);
       animation-duration: 2s;
-      animation-delay: 2s;
+      animation-delay: 2.5s;
     }
 
     .circles {
@@ -85,8 +86,8 @@
 
     @keyframes animateRed {
       from {
-        top: -20px;
-        left: 20px;
+        top: -10px;
+        left: 10px;
         opacity: 0;
       }
       to {
@@ -97,8 +98,8 @@
     }
     @keyframes animateYellow {
       from {
-        top: -250px;
-        right: -60px;
+        top: -220px;
+        right: 0px;
         opacity: 0;
       }
       to {
@@ -121,23 +122,32 @@
       }
     }
 
+    @keyframes animateTitle {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
     @media (max-width: 1100px) {
       .header-title-wrap {
         margin-left: 10px;
         max-width: 500px !important;
-        margin-top: 100px !important;
+        /*  margin-top: 100px !important; */
       }
       .header {
-        max-height: 600px;
+        /* max-height: 600px; */
       }
       .container {
-        max-height: 600px;
+        /*  max-height: 600px; */
         margin-left: 10px !important;
       }
-      .title {
+      /*  .title {
         font-size: 40px !important;
         line-height: 50px !important;
-      }
+      } */
       .red {
         width: 180px !important;
         height: 180px !important;
@@ -203,25 +213,79 @@
         }
       }
     }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 40px !important;
+        width: 400px;
+        height: 250px !important;
+        margin-top: -40px;
+      }
+    }
+
     @media (max-width: 880px) {
+      @keyframes animateRed {
+        from {
+          top: -10px;
+          left: 10px;
+          opacity: 0;
+        }
+        to {
+          top: 20px;
+          left: 20px;
+          opacity: 1;
+        }
+      }
+      @keyframes animateYellow {
+        from {
+          top: 80px;
+          right: 20px;
+          opacity: 0;
+        }
+        to {
+          top: 140px;
+          right: 40px;
+          opacity: 1;
+        }
+      }
+      @keyframes animatePink {
+        from {
+          top: 60px;
+          left: -20px;
+          opacity: 0;
+        }
+        to {
+          top: 200px;
+          left: 40px;
+          opacity: 1;
+        }
+      }
       .red {
-        width: 160px;
-        height: 160px;
+        width: 120px !important;
+        height: 120px !important;
+        top: 20px !important;
+        left: 20px !important;
       }
       .yellow {
-        width: 132px;
-        height: 132px;
+        width: 80px !important;
+        height: 80px !important;
+        right: 40px !important;
+        top: 140px !important;
+        animation-delay: 2.5s;
       }
       .pink {
-        width: 86px;
-        height: 86px;
+        width: 50px !important;
+        height: 50px !important;
+        top: 200px !important;
+        left: 40px !important;
+        animation-delay: 3s;
       }
       .header {
-        max-height: 500px !important;
+        /* max-height: 500px !important */
       }
       .header-title-wrap {
-        max-width: 400px !important;
-        max-height: 600px;
+        /*  max-width: 400px !important; */
+        /*  max-height: 600px; */
         font-size: 30px !important;
         margin-top: 0px !important;
         margin: 0px !important;
@@ -235,30 +299,108 @@
         text-align: center !important;
       }
       .title {
-        text-align: center !important;
-        font-size: 30px !important;
-        width: 400px;
+        text-align: center !important; /*
+        font-size: 30px !important; */
+        /* width: 400px; */
       }
       .container {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         margin: 0px !important;
+        height: 100%;
+      }
+      .circles-wrap {
+        position: absolute;
+      }
+      .header {
+        position: relative;
       }
       .circles {
         position: absolute;
-        top: 0px;
+        top: -200px;
         left: 400px;
         z-index: -5;
       }
     }
+    @media (max-width: 450px) {
+      body header .title {
+        font-size: 30px !important;
+        width: 80vw !important;
+        height: 200px !important;
+      }
+    }
+    @media (max-width: 410px) {
+      body header .title {
+        font-size: 30px !important;
+        line-height: 50px;
+        width: 80vw !important;
+        height: 200px !important;
+      }
+      body .header-description {
+        font-size: 22px !important;
+        width: 80vw;
+      }
+    }
 
-    @media (max-width: 550px) {
+    @media (max-width: 350px) {
+      body header .title {
+        font-size: 28px !important;
+        width: 80vw !important;
+        height: 200px !important;
+      }
+      body .header-description {
+        font-size: 22px !important;
+        width: 80vw;
+      }
+    }
+
+    @media (max-width: 300px) {
+      body header .title {
+        font-size: 22px !important;
+        width: 80vw !important;
+        line-height: 45px;
+        height: 200px !important;
+      }
+      body .header-description {
+        font-size: 20px !important;
+        width: 80vw;
+      }
+      .header-btn {
+        width: 200px !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        padding: 0px 5px !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header .red {
+        width: 100px !important;
+        height: 100px !important;
+        top: 20px !important;
+        left: 20px !important;
+      }
+      header .yellow {
+        width: 60px !important;
+        height: 60px !important;
+        right: 40px !important;
+        top: 140px !important;
+        animation-delay: 2.5s;
+      }
+      .pink {
+        width: 20px !important;
+        height: 20px !important;
+        top: 200px !important;
+        left: 40px !important;
+        animation-delay: 3s;
+      }
       .circles {
         position: absolute;
-        top: 0px;
-        left: 200px;
+        top: -100px;
+        left: 250px;
         z-index: -5;
       }
     }
@@ -291,6 +433,9 @@
       opacity: 1;
       padding: 40px 0px;
       margin-bottom: 15px;
+      animation-name: animateTitle;
+      animation-duration: 2s;
+      transition: cubic-bezier(0.12, 0, 0.39, 0);
     }
 
     .header-description {
@@ -308,6 +453,11 @@
       padding: 40px 0px;
       margin: 10px 0px;
       margin-top: 40px;
+      opacity: 0;
+      animation-name: animateTitle;
+      animation-duration: 2s;
+      animation-delay: 1.5s;
+      transition: cubic-bezier(0.11, 0, 0.5, 0);
     }
     .header-title-wrap {
       display: flex;
@@ -323,11 +473,13 @@
       box-shadow: inset -4rem 5px 20px 40rem rgba(0, 0, 0, 10%);
       width: 100%;
       height: 700px;
+      height: 80vh;
       position: relative;
       padding: -1px;
       padding: 1px;
       margin-top: 77px;
       z-index: -5;
+      overflow: hidden;
     }
     .header-btn {
       z-index: 10;
@@ -344,10 +496,14 @@
       padding-left: 32px;
       border-radius: 3px;
       padding-right: 32px;
-      opacity: 1;
+      opacity: 0;
       visibility: visible;
       border-width: 0px;
       margin: 10px 0px;
+      animation-name: animateTitle;
+      animation-duration: 2s;
+      animation-delay: 3s;
+      transition: cubic-bezier(0.11, 0, 0.5, 0);
     }
     input[type="submit"]:hover {
       cursor: pointer;
@@ -394,20 +550,42 @@
     <section></section>
 
     <script>
+      var redPos = 0;
+      var yellowPos = 32;
+      var pinkPos = 90;
       let lastKnownScrollPosition = 0;
       let ticking = false;
       var red = document.querySelector(".red");
       var yellow = document.querySelector(".yellow");
       var pink = document.querySelector(".pink");
 
+      function myFunction(x, a, b, c) {
+        if (x.matches) {
+          redPos = a;
+          yellowPos = b;
+          pinkPos = c;
+          console.log(pinkPos);
+        } else {
+        }
+      }
+
+      //These are the breakpoints
+      var x1 = window.matchMedia("(max-width: 880px)");
+      var x2 = window.matchMedia("(max-width: 1100px)");
+
+      myFunction(x1); // Call listener function at run time
+      x1.addListener(myFunction(x1, 20, 140, 200)); // Attach listener function on state changes
+      x2.addListener(myFunction(x2, 0, 32, 90));
+
       function doSomething(scrollPos) {
         // Do something with the scroll position
         const rate1 = 2.2;
         const rate2 = 1.3;
         scrollPos = scrollPos / 10;
-        red.style.top = scrollPos + "px";
-        yellow.style.top = 32 + scrollPos * rate1 + "px";
-        pink.style.top = 90 + scrollPos * rate2 + "px";
+
+        red.style.top = redPos + scrollPos + "px";
+        yellow.style.top = yellowPos + scrollPos * rate1 + "px";
+        pink.style.top = pinkPos + scrollPos * rate2 + "px";
       }
 
       document.addEventListener("scroll", function (e) {
@@ -432,6 +610,16 @@
 
       pink.addEventListener("animationend", function () {
         pink.style.opacity = 1;
+      });
+
+      var headerPara = document.querySelector(".header-description");
+      headerPara.addEventListener("animationend", function () {
+        headerPara.style.opacity = 1;
+      });
+
+      var btn = document.querySelector(".header-btn");
+      btn.addEventListener("animationend", function () {
+        btn.style.opacity = 1;
       });
     </script>
   </body>
