@@ -342,13 +342,13 @@
         }
         @keyframes animatePink {
           from {
-            top: 60px !important;
-            left: -20px !important;
+            top: 60px;
+            left: -20px t;
             opacity: 0;
           }
           to {
-            top: 200px !important;
-            left: 40px !important;
+            top: 200px;
+            left: 40px;
             opacity: 1;
           }
         }
@@ -439,34 +439,73 @@
             opacity: 1;
           }
         }
+        @keyframes animateRed {
+          from {
+            top: -10px;
+            left: 10px;
+            opacity: 0;
+          }
+          to {
+            top: -75px;
+            left: 20px;
+            opacity: 1;
+          }
+        }
         header .red {
-          width: 100px !important;
-          height: 100px !important;
-          top: 20px;
+          width: 220px !important;
+          height: 220px !important;
+          top: -75px;
           left: 20px;
         }
         header .yellow {
-          width: 60px !important;
-          height: 60px !important;
+          width: 53px !important;
+          height: 53px !important;
           right: 10px;
           top: 120px;
           animation-delay: 2.5s;
         }
         .pink {
-          width: 20px !important;
-          height: 20px !important;
+          width: 50px !important;
+          height: 50px !important;
           top: 200px;
-          left: 40px !important;
+          left: 40px;
           animation-delay: 3s;
+        }
+        .container form input {
+          margin-top: 20px;
         }
         .circles {
           position: absolute;
-          top: -100px;
+          top: -360px;
           left: 250px;
           z-index: -5;
         }
       }
       @media screen and (max-width: 450px) {
+        @keyframes animateYellow {
+          from {
+            top: 80px;
+            right: 20px;
+            opacity: 0;
+          }
+          to {
+            top: 185px;
+            right: -20px;
+            opacity: 1;
+          }
+        }
+        @keyframes animatePink {
+          from {
+            top: 60px;
+            left: -20px;
+            opacity: 0;
+          }
+          to {
+            top: 295px;
+            left: 58px;
+            opacity: 1;
+          }
+        }
         body header .title {
           font-size: 30px !important;
           line-height: 50px;
@@ -474,42 +513,54 @@
           height: 200px !important;
         }
         .circles {
-          top: -340px !important;
+          top: -320px !important;
           left: 170px !important;
         }
         body header .red {
-          width: 60px !important;
-          height: 60px !important;
+          width: 100px;
+          height: 100px;
         }
         body header .circles .yellow {
-          top: 120px;
-          right: -50px !important;
+          top: 185px;
+          right: -20px !important;
         }
         body header .pink {
-          left: 80px !important;
-          top: 180px;
+          left: 58px !important;
+          top: 295px;
         }
         body header .header-description {
-          font-size: 22px !important;
+          font-size: 18px !important;
           width: 80vw;
         }
       }
       @media screen and (max-width: 410px) {
         body header .title {
-          font-size: 30px !important;
+          font-size: 22px !important;
           line-height: 50px;
+          text-align: center;
           width: 80vw !important;
           height: 200px !important;
+          margin: 30px !important;
+          font-weight: bold;
+        }
+        .header-title-wrap {
+          margin-top: -60px !important;
         }
         body .header-description {
           font-size: 22px !important;
           width: 80vw;
+          margin: 25px !important;
+          margin-bottom: 35px !important;
+          margin-top: 30px !important;
+        }
+        .header-btn {
+          margin-top: 20px !important;
+          margin-bottom: 20px !important;
         }
       }
 
       @media screen and (max-width: 350px) {
         body header .title {
-          font-size: 28px !important;
           width: 80vw !important;
           height: 200px !important;
         }
@@ -593,17 +644,48 @@
           yellowPos = b;
           pinkPos = c;
           console.log(yellowPos);
+          return true;
         } else {
+          return false;
         }
       }
 
       //These are the breakpoints
-      var x1 = window.matchMedia("(max-width: 880px)");
-      var x2 = window.matchMedia("(max-width: 1100px)");
+      var x1 = window.matchMedia("(max-width: 1100px)");
+      var x2 = window.matchMedia("(max-width: 880px)");
+      var x3 = window.matchMedia("(max-width: 600px)");
+      var x4 = window.matchMedia("(max-width: 450px)");
 
-      myFunction(x1); // Call listener function at run time
-      x1.addListener(myFunction(x1, 20, 120, 200)); // Attach listener function on state changes
-      /* x2.addListener(myFunction(x2, 0, 32, 90)); */
+      if (x4.matches) {
+        myFunction(x4, -75, 185, 295);
+      } else if (x3.matches) {
+        myFunction(x3, -75, 120, 200);
+      } else if (x2.matches) {
+        myFunction(x2, 20, 140, 200);
+      } else if (x1.matches) {
+        myFunction(x1, 20, 140, 200);
+      }
+
+      x1.addEventListener("change", (event) => {
+        console.log("x1");
+        myFunction(x1, 20, 140, 200);
+        doSomething(lastKnownScrollPosition);
+      });
+      x2.addEventListener("change", (event) => {
+        console.log("x2");
+        myFunction(x2, 20, 140, 200);
+        doSomething(lastKnownScrollPosition);
+      });
+      x3.addEventListener("change", (event) => {
+        console.log("x3");
+        myFunction(x3, -75, 120, 200);
+        doSomething(lastKnownScrollPosition);
+      });
+      x4.addEventListener("change", (event) => {
+        console.log("x4");
+        myFunction(x4, -75, 185, 295);
+        doSomething(lastKnownScrollPosition);
+      });
 
       function doSomething(scrollPos) {
         // Do something with the scroll position
