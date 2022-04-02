@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script
+      defer
+      src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"
+    ></script>
+    <style>
+      /* external css: flickity.css */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+
+        background-color: rgba(229, 222, 223, 1);
+      }
+
+      .carousel {
+        background-color: rgba(229, 222, 223, 1);
+        width: 90vw;
+        margin: auto;
+      }
+
+      .carousel-cell {
+        height: 652px;
+        margin-right: 10px;
+        margin: 0px 50px;
+        background: #8c8;
+        border-radius: 5px;
+        counter-increment: carousel-cell;
+      }
+
+      /* cell number */
+      .carousel-cell:before {
+        display: block;
+        text-align: center;
+        content: counter(carousel-cell);
+        line-height: 200px;
+        font-size: 80px;
+        color: white;
+      }
+      .carousel-cell:nth-child(1) {
+        background-image: url("");
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flickity - wrapAround</h1>
+
+    <!-- Flickity HTML init -->
+    <div class="carousel" data-flickity='{ "wrapAround": true }'>
+      <img class="carousel-cell" src="https://static.showit.co/800/y2kx-7SiSDaupoiKhYBxrw/48203/dscf7420.jpg"></img>
+      <img class="carousel-cell" src="https://static.showit.co/800/O3Tg0XsnRbeshrolIN-Qmw/48203/45164_11-2_copy.jpg"></img>
+      <img class="carousel-cell" src="https://static.showit.co/800/0zPcSMg4QZCm48vx4L2TcA/48203/janetteandrewwedding-512-2.jpg"></img>
+      <img class="carousel-cell" src="https://static.showit.co/800/taYGKrr_Rwy56rSaFURcUA/48203/charleston_wedding_photography-121.jpg"></img>
+    </div>
+    <script>
+    
+    var selected = document.querySelector(".is-selected");
+
+      var elem = document.querySelector(".main-carousel");
+    </script>
+  </body>
+</html>
