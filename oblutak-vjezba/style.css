@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #b2cbae;
+  background-color: white;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.banner {
+  background-image: url(img/banner.png);
+  height: 55vh;
+  width: 70vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -75px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero .title-wrap {
+  color: #9ab794;
+  border-bottom: 4px solid #b2cbae;
+  width: 480px;
+}
+
+.header {
+  margin: 0 80px;
+}
+
+.logo {
+  margin-top: auto;
+  margin-bottom: 85px;
+  width: 750px;
+}
+
+.logo .title-wrap h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-left: 90px;
+  width: 300px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.logo p {
+  line-height: 1.2;
+  color: black;
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-left: 90px;
+  width: 300px;
+  margin-top: 10px;
+}
+
+.hero-bar {
+  height: 140px;
+  background-color: #b2cbae;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.hero-bar h3 {
+  width: 500px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.hero-bar p {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 5px;
+  letter-spacing: 0px;
+}
+
+.showcase {
+  margin: 0 80px;
+}
+
+.card {
+  display: flex;
+  height: 320px;
+}
+
+.col6 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-banner {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: #111;
+}
+
+.card-banner img {
+  width: 280px;
+  transform: translate(-25px, 10px);
+}
+
+.card-description {
+  background-color: #f7f7f7;
+  height: 100%;
+  width: 100%;
+}
+.card-container {
+  margin: 40px;
+}
+
+.card-title {
+  border-bottom: 4px solid #b2cbae;
+  padding: 10px 0px;
+}
+
+.gran {
+  display: block;
+  padding: 10px 0px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.granulacija {
+  font-size: 13px;
+  font-weight: 500;
+  width: 80%;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+}
+
+.bigbag img {
+  height: 80px;
+  transform: translateY(-20px);
+}
+/* h3 naslov */
+.green {
+  color: #9ab794;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.black {
+  font-weight: 800;
+  margin: 5px 0px;
+  margin-top: 30px;
+}
+
+.cijena {
+  color: black;
+  text-shadow: 0px 0px 1px #444;
+  font-weight: 900;
+  font-size: 12px;
+  background-color: #b2cbae;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 10px 20px;
+  margin-top: 5px;
+}
+
+.kontakt-forma form {
+  display: flex;
+  flex-direction: column;
+}
+.kontakt-forma {
+  height: 400px;
+  width: 450px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+form {
+  background-color: #f7f7f7;
+}
+
+form input:not(input[type="checkbox"]) {
+  width: 100%;
+  margin: 5px auto;
+  outline: none;
+  border: none;
+  font-family: "Work Sans", sans-serif;
+  height: 40px;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+  padding: 0px 10px;
+}
+form input::placeholder {
+  font-family: "Work Sans", sans-serif;
+  /*  padding: 10px; */
+  font-size: 12px;
+}
+
+form input[type="checkbox"] {
+  margin: 5px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid black;
+}
+.chk {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+label[for="checkbox"]:hover,
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+.form-container {
+  margin: 0 80px;
+  background-color: #b2cbae;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.form-wrap {
+  margin: 30px;
+  background-color: white;
+}
+
+.submit-btn {
+  font-family: "Work Sans", sans-serif;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  width: 140px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #b2cbae;
+  padding: 10px 10px;
+}
+
+.submit-btn:hover {
+  box-shadow: inset 1px 1px 1px 5rem rgb(0, 0, 0, 20%);
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: inset 1px 1px 1px 5rem rgb(0, 0, 0, 20%);
+  cursor: pointer;
+}
+.form-wrap p {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+footer {
+  margin: 0 80px;
+}
+
+footer h2 {
+  color: #9ab794;
+  font-size: 22px;
+  border-bottom: 4px solid #b2cbae;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+footer .kontakt {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  height: 320px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+footer svg {
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 140px;
+}
+/* @media screen and (max-width: 480px) {
+  .logo {
+    max-width: 320px;
+  }
+  .title-wrap {
+    max-width: 320px;
+  }
+  .logo p {
+    margin: 0 auto;
+  }
+} */
+@media screen and (max-width: 1050px) {
+  .green {
+    font-size: 14px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .col6 {
+    width: 100%;
+    height: auto;
+  }
+  .header,
+  .showcase,
+  .form-container {
+    margin: auto 0px;
+  }
+  .card-banner {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .card:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .card:nth-child(even) .green,
+  .card:nth-child(even) .black {
+    text-align: end;
+  }
+  .card:nth-child(even) {
+    text-align: end;
+  }
+  .gran {
+    text-align: left;
+  }
+  .card:nth-child(even) .card-banner::after {
+  }
+}
