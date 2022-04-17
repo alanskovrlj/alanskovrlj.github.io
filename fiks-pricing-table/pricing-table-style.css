@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/*Global Styles*/
+.pricing-table-container {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+  overflow-x:hidden 
+}
+.pricing-table-body,
+.pricing-table-ayear {
+  font-size: 15px;
+}
+.pricing-table-internship {
+  font-size: 13px;
+}
+.pricing-table-body strong {
+  font-weight: 700 !important;
+  color: #333;
+}
+
+/* Parent*/
+.pricing-table-wrapper {
+  max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Only for second child*/
+.pricing-table-col:nth-child(2) {
+  box-shadow: 0 6px 20px rgb(0 0 0 / 15%);
+  border-radius: 16px;
+}
+
+/* 2 Child*/
+.pricing-table-col {
+  width: 320px;
+  height: 485px;
+  margin: 0px 10px;
+  color: rgb(0, 66, 46);
+  flex-grow: 1;
+}
+
+.pricing-table-hide{
+height: 25px;
+width: 100px;
+position: absolute;
+right: 0px;
+top: -25px;
+background-color: white;
+z-index: 4;
+}
+.pricing-table-hide-second{
+  width: 25px;
+  height: 50px;
+position: absolute;
+right: -25px;
+top: 45px;
+background-color: white;
+z-index: 4;
+}
+/************************
+/************************
+/************************
+/* Table Header Styles*/
+.pricing-table-header-container {
+  margin: 32px 0px;
+  padding-top: 20px;
+}
+.pricing-table-col:nth-child(2){
+  position: relative;
+}
+
+.pricing-table-ribbon{
+    color: #fff;
+    background: rgb(255, 19, 61);
+    position: absolute;
+    display: block;
+    top: 18px;
+    right: -30px;
+    width: 128px;
+    padding: 9px 20px 8px;
+    margin: 0;
+    transform: rotate(45deg);
+    height: 32px;
+    text-align: center;
+    font-size: 13px !important;
+    z-index: -20 !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box
+}
+
+.pricing-table-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.pricing-table-internship {
+  text-align: center;
+  margin-top: 4px;
+}
+.pricing-table-body{
+  width: 320px;
+}
+/* Table Body Styles*/
+.pricing-table-body-inner p {
+  text-align: center;
+  line-height: 2.2em;
+  color: #00422e !important;
+  font-family: "Montserrat", sans-serif;
+  max-width: 240px;
+  height: 165px;
+  margin: 0 auto;
+  padding: 8px 32px;
+}
+
+/* Table Price Styles*/
+.pricing-table-price-container {
+  text-align: center;
+}
+
+/* Table Footer Styles*/
+.pricing-table-footer {
+  text-align: center;
+  margin: 32px 0px;
+  
+  padding-bottom: 20px;
+}
+.pricing-table-btn {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid transparent;
+  line-height: 38px;
+  background: rgb(255, 19, 61);
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 0px 40px;
+  min-width: 100px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.pricing-table-btn:hover{
+  opacity: 0.8;
+}
+.pricing-table-col:first-child .pricing-table-btn {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid transparent;
+  line-height: 38px;
+  background: white;
+  color: rgb(255, 19, 61);
+  border: 1px solid rgb(255, 19, 61);
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0px 40px;
+  min-width: 100px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.pricing-table-btn:hover {
+  cursor: pointer;
+}
+
+/* Dollar sign*/
+.pricing-table-price-inner sup {
+  font-size: 17px;
+  position: relative;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+/* / year  */
+.pricing-table-ayear {
+  opacity: 0.7;
+}
+
+/* Amount */
+.pricing-table-value {
+  font-size: 34px;
+  font-weight: 600;
+  color: #00422e;
+}
+
+@media (max-width: 700px) {
+  .pricing-table-wrapper{
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .pricing-table-col{
+margin: 0 auto;
+  }
+  
+}
+@media (max-width: 340px) {
+  .pricing-table-wrapper{
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }.pricing-table-col{
+    width: 280px;
+  }
+  .pricing-table-body-inner{
+    width: 280px;
+  }
+  .pricing-table-body-inner p{
+    padding: 0px;
+  }
+  
+}
