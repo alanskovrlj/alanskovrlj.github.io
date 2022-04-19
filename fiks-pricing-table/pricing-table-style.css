@@ -32,8 +32,20 @@
 
 /* Only for second child*/
 .pricing-table-col:nth-child(2) {
-  box-shadow: 0 6px 20px rgb(0 0 0 / 15%);
   border-radius: 16px;
+  position: relative;
+}
+.pricing-table-shadow{
+  position: absolute;
+  z-index: 10;
+  height: 485px;
+  border-radius: 16px;
+  top:0px;
+  width: 320px !important;
+  background-color: transparent;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 15%);
+  ;
+
 }
 
 /* 2 Child*/
@@ -53,6 +65,7 @@ right: 0px;
 top: -25px;
 background-color: white;
 z-index: 4;
+
 }
 .pricing-table-hide-second{
   width: 25px;
