@@ -158,9 +158,12 @@ z-index: 4;
   transition: all 0.2s ease;
   border-radius: 4px;
   text-decoration: none;
+  position: relative;
+  z-index: 20;
 }
 .pricing-table-btn:hover{
   opacity: 0.8;
+  cursor: pointer;
 }
 .pricing-table-col:first-child .pricing-table-btn {
   font-family: "Montserrat", sans-serif;
@@ -214,6 +217,10 @@ z-index: 4;
   .pricing-table-col{
     margin: 15px auto;
   }
+   .pricing-table-col:first-child{
+     margin-top: 0px;
+     margin-bottom: 60px;
+   }
   
 }
 @media (max-width: 340px) {
