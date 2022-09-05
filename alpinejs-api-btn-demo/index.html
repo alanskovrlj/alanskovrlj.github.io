@@ -13,9 +13,17 @@
   </div>
   <div x-data="{
   article: null,
+  last: 5,
   getList() {
-    fetch('./data.json').then((res) =>res.json()).then((data) => {console.log(Math.round(Math.random()*4))
-            this.article=data.articles[Math.round(Math.random()*3)];
+    fetch('./data.json').then((res) =>res.json()).then((data) => {
+        
+            let rand = 0
+            while(rand == this.last){
+                rand = Math.round(Math.random()*3)
+            }
+            this.last = rand;
+            console.log(rand,this.last)
+            this.article=data.articles[rand];
             console.log(data)
     })
 }
